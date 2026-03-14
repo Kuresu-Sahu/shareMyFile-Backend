@@ -5,7 +5,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const path = require('path');
 
-app.use(cors())
+app.use(cors({
+  origin: "https://sharemyfile.onrender.com"
+}));
 app.use(express.static('public'));
 
 const connectDB = require('./config/db');
